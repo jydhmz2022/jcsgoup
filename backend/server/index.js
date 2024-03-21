@@ -11,7 +11,6 @@ app.use(bodyParser.json());
 app.get("/", (req, res) => {
     res.send("Bienvenue sur votre serveur JCS Group!");
   });
-  
 app.use('/send-email', emailRoutes);
 
 const PORT = process.env.PORT || 3001;
