@@ -24,7 +24,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "cd backend/server && node index.js",
     "install-jservicesapp" : "cd jservicesapp && npm install",
     "heroku-postbuild" : "npm run install-jservicesapp && npm run build",
     "build": "cd jservicesapp && npm run build",
