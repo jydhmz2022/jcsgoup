@@ -13,5 +13,5 @@ app.get("/", (req, res) => {
   });
 app.use('/send-email', emailRoutes);
 
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 5006;
 app.listen(PORT, () => console.log(`Serveur démarré sur le port ${PORT}`));

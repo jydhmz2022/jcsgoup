@@ -7,6 +7,8 @@ import Loading from './Loading';
 
 function Contact() {
   
+  const backendPort = process.env.BACKEND_PORT  || 5005
+  const backendURL = `http://localhost:${backendPort}/send-email/send`
 
   const {t, i18n} = useTranslation()
   const inputPlaceholderClass = i18n.language === 'ar' || i18n.language === 'hs' ? 'placeholder-right' : '';
@@ -24,7 +26,7 @@ function Contact() {
     e.preventDefault();
     setIsLoading(true); 
     try {
-      const response = await fetch('http://localhost:3001/send-email/send', {
+      const response = await fetch(backendURL, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

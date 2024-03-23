@@ -1,4 +1,5 @@
 {
+  "homepage": "https://jydhms2022.github.io/jcsgroup",
   "name": "jservicesapp",
   "version": "0.1.0",
   "private": true,
@@ -24,16 +25,14 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "cd backend/server && node index.js",
-    "install-jservicesapp" : "cd jservicesapp && npm install",
-    "heroku-postbuild" : "npm run install-jservicesapp && npm run build",
-    "build": "cd jservicesapp && npm run build",
+    "start": "react-scripts start",
+    "server": "cd backend/server && node index.js",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "gh-pages -d build"
   },
-
   "engines": {
-    "node" : "21.x"
+    "node": "21.x"
   },
   "eslintConfig": {
     "extends": [
@@ -54,6 +53,7 @@
     ]
   },
   "devDependencies": {
-    "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "gh-pages": "^6.1.1"
   }
 }
