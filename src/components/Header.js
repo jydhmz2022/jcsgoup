@@ -6,7 +6,7 @@ function Header() {
   return (
     <div className="header">
       
-  <a href="/"><img src='logo.png' className='logo' alt='logo'/></a>
+  <a href="/"><img src={`${process.env.PUBLIC_URL}/logo.png`}  className='logo' alt='logo'/></a>
     <div><LanguageSelector/></div>
     
     </div>

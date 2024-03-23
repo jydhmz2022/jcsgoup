@@ -15,7 +15,7 @@ function Accueil() {
          <h2 className="service-title">
             <a href="/contact" className="custom-link">{t(service.title)}</a>
           </h2>
-        <img src={service.image} alt="Autre service numérique" className="service-image" />
+        <img src={process.env.PUBLIC_URL + '/' + service.image} alt="Autre service numérique" className="service-image" />
         <p>{t(service.description)}</p>
       </div>))}
     </div> 
